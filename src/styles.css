@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@csstools/normalize.css";
+
+:root {
+	--primary: #d1c5e3;
+	--secondary: #efd9e1;
+	--background: #b0b2c2a0;
+	--color-on: #bba2fa;
+	--color-off: #ccc8f7;
+	--fuchsia: #ce2665;
+	--black: #222222;
+	--white: #f8f9fa;
+}
+
+html,
+body {
+	height: auto;
+	box-sizing: border-box;
+	font-size: 62.2%;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-size: 1.6rem;
+	line-height: 2;
+	background-color: #fafafa;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img {
+	width: auto;
+	height: auto;
+}
+
+div {
+	white-space: break-spaces;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: normal;
+}
+
+.container {
+	width: 98%;
+	margin: 0 auto;
+}
+
+@media (min-width: 321px) {
+	.container {
+		width: 95%;
+	}
+}
+
+@media (min-width: 481px) {
+	.container {
+		width: 90%;
+	}
+}
+
+@media (min-width: 769px) {
+	.container {
+		width: 85%;
+	}
+}
+
+@media (min-width: 1025px) {
+	.container {
+		width: 80%;
+	}
+}
+
+@media (min-width: 1201px) {
+	.container {
+		max-width: 150rem;
+	}
+}
