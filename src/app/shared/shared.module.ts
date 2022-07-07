@@ -7,6 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from "@angular/material/card";
 
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from './footer/footer.component';
@@ -15,7 +16,7 @@ import { HeaderPagesComponent } from './header-pages/header-pages.component';
 
 @NgModule({
 	declarations: [HeaderComponent, FooterComponent, SocialLinksComponent, HeaderPagesComponent],
-	imports: [CommonModule, RouterModule, MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule],
-	exports: [MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, HeaderComponent, FooterComponent, HeaderPagesComponent, SocialLinksComponent]
+	imports: [CommonModule, RouterModule, MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule],
+	exports: [MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule, HeaderComponent, FooterComponent, HeaderPagesComponent, SocialLinksComponent]
 })
 export class SharedModule {}

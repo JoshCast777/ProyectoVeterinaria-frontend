@@ -1,0 +1,44 @@
+.text-button {
+	/* height: auto; */
+	padding: 3rem;
+	background-color: var(--background);
+	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-moz-border-radius: 2rem;
+	-ms-border-radius: 2rem;
+	-o-border-radius: 2rem;
+}
+
+h2 {
+	font-size: 3rem;
+	line-height: normal;
+	text-align: center;
+}
+
+button {
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	word-wrap: normal;
+	background-color: var(--color-on);
+	color: var(--white);
+	font-size: 2rem;
+	line-height: normal;
+}
+
+@media (min-width: 769px) {
+	.text-button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	p {
+		margin: 0;
+		flex-basis: 75%;
+	}
+
+	button {
+		width: auto;
+	}
+}

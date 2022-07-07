@@ -2,6 +2,7 @@ mat-toolbar {
 	height: 8vh;
 	justify-content: space-between;
 	background-color: var(--primary);
+	box-shadow: 0 0.1rem 0.3rem -0.1rem var(--black);
 }
 
 .header {
@@ -24,9 +25,6 @@ mat-toolbar {
 	width: 3rem;
 	height: 3rem;
 	padding: 0.3rem;
-	/* width: 5rem;
-	height: 5rem;
-	padding: 0.5rem; */
 	line-height: normal;
 }
 
