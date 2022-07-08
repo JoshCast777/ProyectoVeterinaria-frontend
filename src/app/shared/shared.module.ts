@@ -13,10 +13,12 @@ import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from './footer/footer.component';
 import { SocialLinksComponent } from './social-links/social-links.component';
 import { HeaderPagesComponent } from './header-pages/header-pages.component';
+import { CardComponent } from "./card/card.component";
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-	declarations: [HeaderComponent, FooterComponent, SocialLinksComponent, HeaderPagesComponent],
+	declarations: [HeaderComponent, FooterComponent, SocialLinksComponent, HeaderPagesComponent, CardComponent, ButtonComponent],
 	imports: [CommonModule, RouterModule, MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule],
-	exports: [MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule, HeaderComponent, FooterComponent, HeaderPagesComponent, SocialLinksComponent]
+	exports: [MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule, HeaderComponent, FooterComponent, HeaderPagesComponent, SocialLinksComponent, CardComponent, ButtonComponent]
 })
 export class SharedModule {}

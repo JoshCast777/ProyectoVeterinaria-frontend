@@ -15,17 +15,6 @@ h2 {
 	text-align: center;
 }
 
-button {
-	display: block;
-	width: 100%;
-	padding: 1rem;
-	word-wrap: normal;
-	background-color: var(--color-on);
-	color: var(--white);
-	font-size: 2rem;
-	line-height: normal;
-}
-
 @media (min-width: 769px) {
 	.text-button {
 		display: flex;
@@ -36,9 +25,5 @@ button {
 	p {
 		margin: 0;
 		flex-basis: 75%;
-	}
-
-	button {
-		width: auto;
 	}
 }

@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { TextButton } from "src/app/interfaces/app.intefaces";
 
 @Component({
 	selector: "app-services",
@@ -7,12 +8,16 @@ import { Component } from "@angular/core";
 
 		<app-services-content *ngFor="let data_card of data_cards; let index = index" [title]="titles[index]" [data_card]="data_card"></app-services-content>
 
-		<app-text-button></app-text-button>
+		<app-text-button [text_button]="text_button"></app-text-button>
 	`,
 	styles: []
 })
 export class ServicesComponent {
 	titles: string[] = ["Ofrecemos", "Especialidades"];
+	text_button: TextButton = {
+		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam ad deleniti animi officiis sit facilis magnam cupiditate quas assumenda aliquam unde debitis perspiciatis blanditiis, explicabo voluptatum consequuntur consequatur eveniet?",
+		button: "Agendar cita"
+	};
 	data_cards = [
 		[
 			{

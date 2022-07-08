@@ -7,3 +7,8 @@ export interface DataCards {
 	title: string;
 	text: string;
 }
+
+export interface TextButton {
+	text: string;
+	button: string;
+}
