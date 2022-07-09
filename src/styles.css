@@ -84,3 +84,7 @@ h6 {
 		max-width: 150rem;
 	}
 }
+
+.swal2-popup {
+	font-size: 125%!important;
+}

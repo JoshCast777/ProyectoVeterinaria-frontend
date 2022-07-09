@@ -1,5 +1,4 @@
 .text-button {
-	/* height: auto; */
 	padding: 3rem;
 	background-color: var(--background);
 	border-radius: 2rem;
@@ -10,9 +9,9 @@
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 3.5rem;
+	font-weight: bold;
 	line-height: normal;
-	text-align: center;
 }
 
 @media (min-width: 769px) {
