@@ -2,7 +2,7 @@ import { Component, Input } from "@angular/core";
 
 @Component({
 	selector: "app-button",
-	template: ` <button mat-flat-button>{{ text }}</button> `,
+	template: ` <button mat-flat-button [routerLink]="link">{{ text }}</button> `,
 	styles: [
 		`
 			button {
@@ -26,4 +26,5 @@ import { Component, Input } from "@angular/core";
 })
 export class ButtonComponent {
 	@Input() text: string = "";
+	@Input() link: string = "";
 }
