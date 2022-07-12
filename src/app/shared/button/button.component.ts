@@ -1,8 +1,8 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "app-button",
-	template: ` <button mat-flat-button [routerLink]="link">{{ text }}</button> `,
+	template: ` <button mat-flat-button [routerLink]="link" (click)="handleClick()">{{ text }}</button> `,
 	styles: [
 		`
 			button {
@@ -27,4 +27,9 @@ import { Component, Input } from "@angular/core";
 export class ButtonComponent {
 	@Input() text: string = "";
 	@Input() link: string = "";
+	@Output() onClick: EventEmitter<void> = new EventEmitter();
+
+	handleClick(): void {
+		this.onClick.emit();
+	}
 }
