@@ -12,3 +12,8 @@ export interface TextButton {
 	text: string;
 	button: string;
 }
+export interface UserLogin{
+	email: string;
+	password: string;
+
+}
