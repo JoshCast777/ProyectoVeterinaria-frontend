@@ -1,26 +1,29 @@
 <mat-sidenav-container>
 	<mat-sidenav-content>
-		<app-header [drawer]="drawer" [nav_items]="nav_items"></app-header>
+		<app-header [sidenav]="sidenav" [nav_items]="nav_items"></app-header>
 
 		<router-outlet></router-outlet>
 
 		<app-footer></app-footer>
 	</mat-sidenav-content>
 
-	<mat-sidenav #drawer>
+	<mat-sidenav #sidenav>
 		<img src="{{ 'logo' | image:'png' }}" routerLink="/" alt="logo" />
 
 		<mat-divider></mat-divider>
 
 		<nav>
 			<div>
-				<button *ngFor="let nav_item of nav_items" mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="router-link-active" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="drawer.toggle()">{{ nav_item.name }}</button>
+				<div *ngFor="let nav_item of nav_items">
+					<button mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="router-link-active" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="sidenav.toggle()">{{ nav_item.name }}</button>
+					<mat-divider></mat-divider>
+				</div>
 			</div>
 
 			<div>
 				<mat-divider></mat-divider>
 
-				<button mat-flat-button class="login"><mat-icon>login</mat-icon> Registrarse / Entrar</button>
+				<button mat-flat-button class="login" (click)="openDialog()"><mat-icon>login</mat-icon> Registrarse / Entrar</button>
 			</div>
 		</nav>
 	</mat-sidenav>

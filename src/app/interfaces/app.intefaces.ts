@@ -2,10 +2,20 @@ export interface NavItem {
 	name: string;
 	path: string;
 }
+
+export interface Image {
+	name: string;
+	ext?: string;
+}
+
 export interface DataCards {
-	img: string;
+	avatar?: Image;
 	title: string;
-	text: string;
+	subtitle?: string;
+	icon?: string;
+	img: Image;
+	text?: string;
+	buttons?: [string, string];
 }
 
 export interface TextButton {
@@ -18,8 +28,19 @@ export interface Button {
 	text: string;
 	link: string;
 }
-export interface UserLogin{
+export interface Auth{
 	email: string;
 	password: string;
+}
 
+export interface User {
+	user_id?: number;
+	dni: string;
+	name: string;
+	last_name: string;
+	date_birth: Date;
+	phone: string;
+	address: string;
+	email: string;
+	password: string;
 }

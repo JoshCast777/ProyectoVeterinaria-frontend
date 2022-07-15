@@ -26,3 +26,15 @@ mat-card img {
 		font-size: 2.3rem;
 	}
 }
+
+.primary {
+	background-color: var(--color-on);
+	color: var(--white);
+}
+
+.secondary {
+	border: 0.1rem solid var(--color-on);
+	color: var(--color-on);
+	background-color: transparent;
+	margin-right: 1rem;
+}

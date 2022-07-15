@@ -2,7 +2,7 @@
 	<mat-tab *ngFor="let card of data_cards" [label]="card.title">
 		<div class="info">
 			<div class="img">
-				<img src="{{ card.img | image }}" alt="{{ card.title }}" />
+				<img src="{{ card.img.name | image }}" alt="{{ card.title }}" />
 			</div>
 
 			<div class="text">

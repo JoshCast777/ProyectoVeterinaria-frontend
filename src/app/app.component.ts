@@ -1,12 +1,15 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
+import { MatSidenav } from "@angular/material/sidenav";
 import { NavItem } from "./interfaces/app.intefaces";
+import { LoginIndexComponent } from "./login/pages/login-index/login-index.component";
 
 @Component({
 	selector: "app-root",
 	templateUrl: "./app.component.html",
 	styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 	title: string = "Veterinaria";
 	nav_items: NavItem[] = [
 		{
@@ -30,4 +33,15 @@ export class AppComponent {
 			path: "/store"
 		}
 	];
+
+	@ViewChild("sidenav") sidenav!: MatSidenav;
+
+	constructor(private dialog: MatDialog) {}
+	ngOnInit(): void {
+		this.dialog.open(LoginIndexComponent);
+	}
+
+	openDialog(): void {
+		this.sidenav.toggle();
+	}
 }

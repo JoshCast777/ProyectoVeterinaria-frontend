@@ -8,8 +8,18 @@ import { DataCards } from "src/app/interfaces/app.intefaces";
 })
 export class CardComponent {
 	@Input() card: DataCards = {
-		img: "",
+		img: {
+			name: "",
+			ext: "jpg"
+		},
+		avatar: {
+			name: "",
+			ext: "jpg"
+		},
 		title: "",
-		text: ""
+		subtitle: "",
+		icon: "",
+		text: "",
+		buttons: ["", ""]
 	};
 }
