@@ -15,7 +15,7 @@ html,
 body {
 	height: auto;
 	box-sizing: border-box;
-	font-size: 62.2%;
+	font-size: 62.5%;
 }
 
 body {
@@ -41,18 +41,44 @@ div {
 	white-space: break-spaces;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.text {
 	line-height: normal;
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 481px) {
+	/* * Tablets */
+	.text {
+		font-size: 1.6rem;
+	}
+}
+
+@media (min-width: 769px) {
+	/* * Small desktop screen */
+	.text {
+		font-size: 1.7rem;
+	}
+}
+
+@media (min-width: 993px) {
+	/* * Desktop screen */
+	.text {
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 1201px) {
+	/* * Extra large screen, TV */
+	.text {
+		font-size: 1.9rem;
+	}
 }
 
 .container {
 	width: 98%;
 	margin: 0 auto;
+	max-width: 150rem;
 }
 
 @media (min-width: 321px) {
@@ -63,28 +89,29 @@ h6 {
 
 @media (min-width: 481px) {
 	.container {
-		width: 90%;
+		width: 93%;
 	}
 }
 
 @media (min-width: 769px) {
 	.container {
-		width: 85%;
+		width: 90%;
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 993px) {
+	/* * Desktop screen */
 	.container {
-		width: 80%;
+		width: 88%;
 	}
 }
 
 @media (min-width: 1201px) {
 	.container {
-		max-width: 150rem;
+		width: 85%;
 	}
 }
 
 .swal2-popup {
-	font-size: 125%!important;
+	font-size: 125% !important;
 }

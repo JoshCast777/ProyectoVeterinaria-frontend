@@ -1,0 +1,55 @@
+<mat-toolbar>
+	<div class="container footer">
+		<div class="footer_info">
+			<div class="logo">
+				<img src="{{ 'logo' | image }}" routerLink="/home" alt="logo" />
+			</div>
+			<div class="info">
+				<h4>Nosotros</h4>
+				<mat-divider class="divider_info"></mat-divider>
+				<p>Somos un equipo de Médicos Veterinarios y persona capacitado para la atención integral de las mascotas</p>
+			</div>
+			<div class="info">
+				<h4>Contáctenos</h4>
+				<mat-divider class="divider_info"></mat-divider>
+				<div>
+					<div class="icon_text">
+						<mat-icon>phone</mat-icon>
+						<p>964852648</p>
+					</div>
+					<div class="icon_text">
+						<mat-icon>email</mat-icon>
+						<p>veterinaria.daw@gmail.com</p>
+					</div>
+					<div class="icon_text">
+						<mat-icon>map</mat-icon>
+						<p>Teodoro Alvarado Oleas</p>
+					</div>
+				</div>
+			</div>
+			<div class="info">
+				<h4 class="footer__tit">Horario</h4>
+				<mat-divider class="divider_info"></mat-divider>
+				<div>
+					<div class="icon_text">
+						<mat-icon>alarm</mat-icon>
+						<p>Lunes a Viernes: 7AM - 5PM</p>
+					</div>
+					<div class="icon_text">
+						<mat-icon>alarm</mat-icon>
+						<p>Fines de semana: 8AM - 3PM</p>
+					</div>
+					<div class="icon_text">
+						<mat-icon>calendar_today</mat-icon>
+						<p>Emergencias 24/7</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<mat-divider></mat-divider>
+		<div class="rights">
+			<app-social-links></app-social-links>
+			<p>&copy;2022 Grupo 3 - Desarrollo de Aplicaciones Web Avanzado - Derechos reservados</p>
+		</div>
+	</div>
+</mat-toolbar>

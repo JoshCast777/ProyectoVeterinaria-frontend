@@ -1,0 +1,12 @@
+<mat-accordion *ngFor="let card of data_cards; let i = index">
+	<mat-expansion-panel [expanded]="i === toggle_number" (opened)="toggleNumber(i)">
+		<mat-expansion-panel-header>
+			<mat-panel-title>{{ card.title }}</mat-panel-title>
+		</mat-expansion-panel-header>
+
+		<div>
+			<img src="{{ card.img | image }}" alt="{{ card.title }}" />
+			<p>{{ card.text }}</p>
+		</div>
+	</mat-expansion-panel>
+</mat-accordion>

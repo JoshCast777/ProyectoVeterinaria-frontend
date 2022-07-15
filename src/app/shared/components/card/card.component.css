@@ -1,0 +1,28 @@
+mat-card {
+	margin-bottom: 2rem;
+	display: grid;
+	grid-template-rows: 0.2fr 1fr;
+}
+
+.img {
+	height: 25rem;
+}
+
+mat-card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media (min-width: 481px) {
+	/* * Tablets */
+	mat-card {
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 993px) {
+	/* * Desktop screen */
+	.mat-card-title {
+		font-size: 2.3rem;
+	}
+}

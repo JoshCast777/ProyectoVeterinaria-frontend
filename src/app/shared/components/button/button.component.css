@@ -1,0 +1,34 @@
+button {
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	word-wrap: normal;
+	background-color: var(--color-on);
+	color: var(--white);
+	font-size: 1.6rem;
+	line-height: normal;
+}
+
+@media (min-width: 481px) {
+	button {
+		font-size: 1.7rem;
+	}
+}
+
+@media (min-width: 769px) {
+	button {
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 993px) {
+	button {
+		font-size: 1.9rem;
+	}
+}
+
+@media (min-width: 1201px) {
+	button {
+		font-size: 2rem;
+	}
+}

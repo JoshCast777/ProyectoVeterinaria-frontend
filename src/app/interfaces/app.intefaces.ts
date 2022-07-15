@@ -9,8 +9,14 @@ export interface DataCards {
 }
 
 export interface TextButton {
+	title: string;
 	text: string;
-	button: string;
+	button: Button;
+}
+
+export interface Button {
+	text: string;
+	link: string;
 }
 export interface UserLogin{
 	email: string;

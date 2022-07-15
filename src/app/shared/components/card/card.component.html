@@ -1,0 +1,13 @@
+<mat-card class="card">
+	<mat-card-header>
+		<mat-card-title class="text">{{ card.title }}</mat-card-title>
+	</mat-card-header>
+
+	<div mat-card-image class="img">
+		<img src="{{ card.img | image }}" [alt]="card.title" />
+	</div>
+
+	<mat-card-content class="text">
+		<p>{{ card.text }}</p>
+	</mat-card-content>
+</mat-card>

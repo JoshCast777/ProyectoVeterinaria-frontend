@@ -1,0 +1,46 @@
+.background {
+	background-color: var(--background);
+}
+
+h2 {
+	font-size: 2.8rem;
+	margin-bottom: 1.5rem;
+	line-height: normal;
+	color: #4e29a9;
+	padding: 1rem;
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+@media (min-width: 321px) {
+	h2 {
+		font-size: 3rem;
+	}
+}
+
+@media (min-width: 481px) {
+	h2 {
+		font-size: 3.3rem;
+	}
+}
+
+@media (min-width: 769px) {
+	h2 {
+		font-size: 3.5rem;
+	}
+}
+
+@media (min-width: 993px) {
+	h2 {
+		font-size: 3.8rem;
+	}
+}
+
+@media (min-width: 1201px) {
+	h2 {
+		font-size: 4rem;
+	}
+}

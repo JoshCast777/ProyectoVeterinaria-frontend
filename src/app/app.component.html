@@ -1,14 +1,14 @@
-<mat-drawer-container>
-	<mat-drawer-content>
+<mat-sidenav-container>
+	<mat-sidenav-content>
 		<app-header [drawer]="drawer" [nav_items]="nav_items"></app-header>
 
 		<router-outlet></router-outlet>
 
 		<app-footer></app-footer>
-	</mat-drawer-content>
+	</mat-sidenav-content>
 
-	<mat-drawer #drawer>
-		<img src="./assets/img/logo.png" routerLink="/" alt="logo" />
+	<mat-sidenav #drawer>
+		<img src="{{ 'logo' | image:'png' }}" routerLink="/" alt="logo" />
 
 		<mat-divider></mat-divider>
 
@@ -23,5 +23,5 @@
 				<button mat-flat-button class="login"><mat-icon>login</mat-icon> Registrarse / Entrar</button>
 			</div>
 		</nav>
-	</mat-drawer>
-</mat-drawer-container>
+	</mat-sidenav>
+</mat-sidenav-container>

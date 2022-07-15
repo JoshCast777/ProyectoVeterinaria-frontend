@@ -1,34 +1,27 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule } from "@angular/material/button";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatDividerModule } from '@angular/material/divider';
-import { MatCardModule } from "@angular/material/card";
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MaterialModule } from "./modules/material.module";
 
-import { HeaderComponent } from "./header/header.component";
-import { FooterComponent } from './footer/footer.component';
-import { SocialLinksComponent } from './social-links/social-links.component';
-import { HeaderPagesComponent } from './header-pages/header-pages.component';
-import { CardComponent } from "./card/card.component";
-import { ButtonComponent } from './button/button.component';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ImagePipe } from "./pipes/image.pipe";
 
-
-
+import { AccordionComponent } from "./components/accordion/accordion.component";
+import { ButtonComponent } from "./components/button/button.component";
+import { CardComponent } from "./components/card/card.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { GridCardComponent } from "./components/grid-card/grid-card.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { HeaderPagesComponent } from "./components/header-pages/header-pages.component";
+import { SocialLinksComponent } from "./components/social-links/social-links.component";
+import { TabsComponent } from "./components/tabs/tabs.component";
+import { TextButtonComponent } from "./components/text-button/text-button.component";
+import { TitleComponent } from "./components/title/title.component";
 
 @NgModule({
-	declarations: [HeaderComponent, FooterComponent, SocialLinksComponent, HeaderPagesComponent, CardComponent, ButtonComponent],
-	imports: [CommonModule, RouterModule, MatCheckboxModule,MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule, MatTabsModule, MatFormFieldModule,MatInputModule, MatDialogModule, ReactiveFormsModule, MatSnackBarModule],
-	exports: [MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule, MatDividerModule, MatCardModule, MatTabsModule, MatFormFieldModule, MatInputModule, HeaderComponent, FooterComponent, HeaderPagesComponent, SocialLinksComponent, CardComponent, ButtonComponent, ReactiveFormsModule,MatCheckboxModule,MatDialogModule, MatSnackBarModule]
+	declarations: [ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent],
+	imports: [CommonModule, ReactiveFormsModule, RouterModule, MaterialModule],
+	exports: [ReactiveFormsModule, MaterialModule, ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent]
 })
 export class SharedModule {}
