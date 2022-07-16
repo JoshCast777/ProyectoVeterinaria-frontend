@@ -1,16 +1,14 @@
-<div class="body">
-    <div class="logo">
-        <img src="{{ 'logo' | image:'png' }}" alt="Logo">
-    </div>
-    <div class="login">
-        <div *ngIf="!login" >
-            <app-login></app-login>
-        </div>
-        <div *ngIf="login" >
-            <app-register></app-register>
-        </div>
-        <div class="boton">
-            <app-button [text]="text" (onClick)="ingresar()"></app-button>
-        </div>
-    </div>
+<div class="dialog">
+	<app-logo mat-dialog-title></app-logo>
+
+	<div class="content">
+		<div class="forms">
+			<div class="div1"></div>
+			<div class="div2"></div>
+			<app-login *ngIf="toggle"></app-login>
+			<app-register *ngIf="!toggle"></app-register>
+		</div>
+
+		<p class="text toggle">{{ toggle ? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?"}} <span (click)="switch()">{{ toggle ? "Regístrate" : "Inicia sesión" }}</span></p>
+	</div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { MatSidenav } from "@angular/material/sidenav";
 import { NavItem } from "./interfaces/app.intefaces";
@@ -9,8 +9,7 @@ import { LoginIndexComponent } from "./login/pages/login-index/login-index.compo
 	templateUrl: "./app.component.html",
 	styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements OnInit {
-	title: string = "Veterinaria";
+export class AppComponent {
 	nav_items: NavItem[] = [
 		{
 			name: "Inicio",
@@ -37,11 +36,11 @@ export class AppComponent implements OnInit {
 	@ViewChild("sidenav") sidenav!: MatSidenav;
 
 	constructor(private dialog: MatDialog) {}
-	ngOnInit(): void {
-		this.dialog.open(LoginIndexComponent);
-	}
 
 	openDialog(): void {
 		this.sidenav.toggle();
+		this.dialog.open(LoginIndexComponent, {
+			panelClass: "mat-dialog"
+		});
 	}
 }

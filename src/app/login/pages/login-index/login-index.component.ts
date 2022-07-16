@@ -6,11 +6,17 @@ import { Component } from "@angular/core";
 	styleUrls: ["./login-index.component.css"]
 })
 export class LoginIndexComponent {
-	constructor() {}
+	toggle: boolean = true;
+
+	constructor() { }
 	login: boolean = false;
 	text: string = "Cree una cuenta gratis";
 	ingresar() {
 		this.text = this.login ? "Cree una cuenta gratis" : "¿ya tiene una cuenta?";
 		this.login = !this.login;
+	}
+
+	switch(): void {
+		this.toggle = !this.toggle;
 	}
 }

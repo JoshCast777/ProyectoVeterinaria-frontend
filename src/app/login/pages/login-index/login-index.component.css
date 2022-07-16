@@ -1,48 +1,81 @@
-.body{
-    gap: 5rem;
-}
-.logo{
-    display: none;
-}
-.boton{
-    margin-top: 4rem;
+@media (max-width: 768px) {
+	.dialog {
+		max-width: 35rem;
+	}
 }
 
-@media (min-width: 481px) {
-    
-    .logo{
-        display: block;
-        width: auto;
-        text-align: center;
-    }
-    .logo>img{
-        width: 30%;
-        
-        
-    }
-    .boton{
-        width: 25rem;
-        margin: auto;
-        margin-top: 1rem;
-    }
+.content {
+	box-shadow: 0 0 1rem -0.5rem #000000bf;
+	background-color: #ccc8f74a;
+	padding: 0.5rem;
+	margin-top: 1rem;
 }
+
+.forms {
+	position: relative;
+	margin-bottom: 2rem;
+	padding: 2rem;
+}
+
+.div1,
+.div2 {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.div1 {
+	background-color: var(--primary);
+	border-radius: 100%3rem 0.5rem;
+	-webkit-border-radius: 100%3rem 0.5rem;
+	-moz-border-radius: 100%3rem 0.5rem;
+	-ms-border-radius: 100%3rem 0.5rem;
+	-o-border-radius: 100%3rem 0.5rem;
+}
+
+.div2 {
+	background-color: var(--secondary);
+	border-radius: 0.5rem 100%3rem;
+	-webkit-border-radius: 0.5rem 100%3rem;
+	-moz-border-radius: 0.5rem 100%3rem;
+	-ms-border-radius: 0.5rem 100%3rem;
+	-o-border-radius: 0.5rem 100%3rem;
+}
+
+.toggle {
+	text-align: center;
+}
+
+.toggle > span {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 @media (min-width: 769px) {
-    .body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .logo{
-        width: 20rem;
-        height: 20rem;
-    }
-    .logo>img{
-        width: 100%;
-    }
-    .boton{
-        width: 24rem;
-        margin: auto;
-        margin-top: 4rem;
-    }
-	
+	.dialog {
+		max-width: 70rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	app-logo {
+		flex-basis: calc(50% - 1rem);
+	}
+
+	.content {
+		box-shadow: 0 0 1rem -0.5rem #000000bf;
+		background-color: #ccc8f74a;
+		padding: 1rem;
+		flex-basis: calc(50% - 1rem);
+		border-radius: 1rem;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		-ms-border-radius: 1rem;
+		-o-border-radius: 1rem;
+	}
 }

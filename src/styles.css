@@ -112,6 +112,43 @@ div {
 	}
 }
 
+.primary {
+	background-color: var(--color-on);
+	color: var(--white);
+	border: 0.1rem solid var(--color-on);
+}
+
+.secondary {
+	border: 0.1rem solid var(--color-on);
+	color: var(--color-on);
+	background-color: transparent;
+}
+
+.warning {
+	background-color: #f85149;
+	color: var(--white);
+	border: 0.1rem solid #f85149;
+}
+
+/* .disable {
+	border: 0.1rem solid var(--color-on);
+	color: var(--color-on);
+	background-color: transparent;
+	opacity: 0.5;
+} */
+
+.hidden {
+	border: 0.1rem solid var(--color-on);
+	color: var(--color-on);
+	background-color: transparent;
+	opacity: 0;
+}
+
+.mat-dialog .mat-dialog-container {
+	width: 95%;
+	margin: 0 auto;
+}
+
 .swal2-popup {
 	font-size: 125% !important;
 }

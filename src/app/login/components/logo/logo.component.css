@@ -1,0 +1,46 @@
+.img {
+	height: 4rem;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin: 0;
+}
+
+img {
+	height: 100%;
+	width: auto;
+}
+
+.title {
+	margin: 0;
+	font-size: 2.1rem;
+	color: #4e29a9;
+}
+
+@media (min-width: 769px) {
+	.img {
+		display: block;
+		height: 30rem;
+	}
+
+	img {
+		height: auto;
+		width: 100%;
+	}
+
+	.title {
+		margin: 0;
+		font-size: 3.5rem;
+		text-align: center;
+		color: #4e29a9;
+		background-color: var(--background);
+		padding: 0.5rem;
+		border-radius: 1rem;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		-ms-border-radius: 1rem;
+		-o-border-radius: 1rem;
+	}
+}
