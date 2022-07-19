@@ -1,11 +1,11 @@
-export interface NavItem {
-	name: string;
-	path: string;
+export interface Auth {
+	email: string;
+	password: string;
 }
 
-export interface Image {
-	name: string;
-	ext?: string;
+export interface Button {
+	text: string;
+	link: string;
 }
 
 export interface DataCards {
@@ -18,23 +18,24 @@ export interface DataCards {
 	buttons?: [string, string];
 }
 
+export interface Image {
+	name: string;
+	ext?: string;
+}
+
+export interface NavItem {
+	name: string;
+	path: string;
+}
+
 export interface TextButton {
 	title: string;
 	text: string;
 	button: Button;
 }
 
-export interface Button {
-	text: string;
-	link: string;
-}
-export interface Auth{
-	email: string;
-	password: string;
-}
-
 export interface User {
-	user_id?: number;
+	id: number;
 	dni: string;
 	name: string;
 	last_name: string;
@@ -43,4 +44,7 @@ export interface User {
 	address: string;
 	email: string;
 	password: string;
+	created_at: Date;
+	updated_at: Date;
+	status: string;
 }

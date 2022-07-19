@@ -13,8 +13,8 @@
 
 .forms {
 	position: relative;
-	margin-bottom: 2rem;
-	padding: 2rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
 }
 
 .div1,
@@ -47,6 +47,7 @@
 
 .toggle {
 	text-align: center;
+	margin: 0;
 }
 
 .toggle > span {

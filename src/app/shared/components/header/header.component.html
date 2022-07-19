@@ -1,14 +1,24 @@
 <mat-toolbar>
 	<div class="container header">
-		<div>
-			<img src="{{ 'logo' | image:'png' }}" alt="logo" routerLink="/home" />
+		<div class="nav">
+			<img src="{{ 'logo' | image: 'png' }}" alt="logo" routerLink="/home" />
 
 			<nav>
 				<button class="nav_item" *ngFor="let nav_item of nav_items" mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ nav_item.name }}</button>
 			</nav>
 		</div>
 
-		<button mat-flat-button class="login" (click)="openDialog()">Registrarse / Entrar</button>
+		<button *ngIf="!user" mat-flat-button class="login" (click)="dialog()">Registrarse / Entrar</button>
+
+		<div class="profile_button" *ngIf="user">
+			<div class="text">
+				<p>{{ user.name + " " + user.last_name }}</p>
+
+				<p (click)="logout()">Cerrar sesión</p>
+			</div>
+
+			<mat-icon>account_circle</mat-icon>
+		</div>
 	</div>
 
 	<div class="mobile-header">
@@ -16,6 +26,6 @@
 			<mat-icon>menu</mat-icon>
 		</button>
 
-		<img src="{{ 'logo' | image:'png' }}" routerLink="/" alt="logo" />
+		<img src="{{ 'logo' | image: 'png' }}" routerLink="/" alt="logo" />
 	</div>
 </mat-toolbar>

@@ -130,13 +130,6 @@ div {
 	border: 0.1rem solid #f85149;
 }
 
-/* .disable {
-	border: 0.1rem solid var(--color-on);
-	color: var(--color-on);
-	background-color: transparent;
-	opacity: 0.5;
-} */
-
 .hidden {
 	border: 0.1rem solid var(--color-on);
 	color: var(--color-on);
@@ -147,6 +140,11 @@ div {
 .mat-dialog .mat-dialog-container {
 	width: 95%;
 	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+.mat-dialog .mat-dialog-title {
+	margin-bottom: 0.5rem;
 }
 
 .swal2-popup {

@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { NavItem, User } from "src/app/interfaces/app.intefaces";
+
 @Component({
-	selector: "app-header",
-	templateUrl: "./header.component.html",
-	styleUrls: ["./header.component.css"]
+	selector: "app-mobile-header",
+	templateUrl: "./mobile-header.component.html",
+	styleUrls: ["./mobile-header.component.css"]
 })
-export class HeaderComponent {
+export class MobileHeaderComponent {
 	@Input() nav_items: NavItem[] = [];
 	@Input() user!: User | undefined;
 	@Output() onToggle = new EventEmitter<void>();
@@ -17,10 +18,10 @@ export class HeaderComponent {
 	}
 
 	dialog(): void {
-		this.openDialog.emit(false);
+		this.openDialog.emit(true);
 	}
 
 	logout(): void {
-		this.onLogout.emit(false);
+		this.onLogout.emit(true);
 	}
 }

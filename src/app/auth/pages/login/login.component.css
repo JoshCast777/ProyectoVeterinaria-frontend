@@ -8,12 +8,12 @@ h2 {
 	font-size: 2rem;
 	font-weight: bold;
 	color: #4e29a9;
-	padding: 0.5rem;
 	position: relative;
+	margin: 0;
 	z-index: 10;
 }
 
-.form {
+form {
 	margin-bottom: 1rem;
 }
 
@@ -24,11 +24,16 @@ mat-form-field {
 
 .login {
 	display: block;
-	margin-bottom: 2rem;
 }
 
 .close_button {
 	display: block;
 	margin: 0 auto;
 	background-color: var(--fuchsia);
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
 }
