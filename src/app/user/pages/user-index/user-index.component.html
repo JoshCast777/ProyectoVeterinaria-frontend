@@ -1,1 +1,19 @@
-<p>user-idex works!</p>
+<div class="container user-index">
+	<div class="header_user">
+		<div>
+			<mat-icon>account_circle</mat-icon>
+			<div>
+				<h2 class="text">{{ user.name + " " + user.last_name }}</h2>
+				<span>Cerrar sesión</span>
+			</div>
+		</div>
+
+		<nav>
+			<a *ngFor="let nav_item of nav_items" class="text" [routerLink]="[nav_item.path]" routerLinkActive="link_active" [routerLinkActiveOptions]="{ exact: true }">{{ nav_item.name }}</a>
+		</nav>
+	</div>
+
+	<div class="content_user">
+		<router-outlet></router-outlet>
+	</div>
+</div>

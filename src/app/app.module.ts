@@ -11,10 +11,11 @@ import { AuthModule } from "./auth/auth.module";
 import { PagesModule } from "./pages/pages.module";
 import { SharedModule } from "./shared/shared.module";
 import { MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material/dialog";
+import { UserModule } from "./user/user.module";
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule, HttpClientModule, SharedModule, PagesModule, AuthModule],
+	imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule, HttpClientModule, SharedModule, PagesModule, AuthModule, UserModule],
 	providers: [
 		{
 			provide: MAT_DIALOG_DEFAULT_OPTIONS,
