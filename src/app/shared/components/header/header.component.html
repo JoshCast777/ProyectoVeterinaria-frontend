@@ -4,7 +4,7 @@
 			<img src="{{ 'logo' | image:'png' }}" alt="logo" routerLink="/home" />
 
 			<nav>
-				<button class="nav_item" *ngFor="let nav_item of nav_items" mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ nav_item.name }}</button>
+				<button class="nav_item" *ngFor="let nav_item of nav_items" mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:nav_item.path === '' ?  true : false }">{{ nav_item.name }}</button>
 			</nav>
 		</div>
 

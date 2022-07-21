@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+    <mat-card-header class="vertical">
+        <mat-card-title class="flex margin">
+            <div mat-card-avatar class="example-header-image"></div>
+            <span>{{card.nombreProducto}}</span>
+            <button class="flex" mat-icon-button style="color: black;height: 3rem; width: 3rem;" color="primary"
+            aria-label="Example icon button with a home icon">
+            <mat-icon>delete_outline</mat-icon>
+            </button>
+        </mat-card-title>
+        <div class="flex">
+            <span>${{ card.precio }}</span>
+            <span>x</span>
+            <app-button-contador-component (onStepper)="calcular($event)" (onStepper)="comunicarCmabio()"></app-button-contador-component>
+            <span>=</span>
+            <span class="total">${{ card.total }}</span>
+        </div>
+    </mat-card-header>
+</mat-card>

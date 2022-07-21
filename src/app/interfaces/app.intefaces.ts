@@ -44,3 +44,11 @@ export interface User {
 	email: string;
 	password: string;
 }
+
+// barrera
+export interface CardCarrito {
+	imagen:String;
+	nombreProducto: string;
+	precio: number;
+	total:number;
+}

@@ -38,10 +38,11 @@ export class AppComponent implements OnInit {
 
 	constructor(private dialog: MatDialog) {}
 	ngOnInit(): void {
-		this.dialog.open(LoginIndexComponent);
+		
 	}
 
 	openDialog(): void {
+		this.dialog.open(LoginIndexComponent);
 		this.sidenav.toggle();
 	}
 }

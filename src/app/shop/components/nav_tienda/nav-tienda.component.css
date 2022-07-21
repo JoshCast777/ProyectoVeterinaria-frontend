@@ -1,0 +1,33 @@
+.subnav-diseño{
+    padding: 1rem;
+    background-color: var(--color-off);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.diseño-opcion{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.diseño-opcion:hover{
+    color: var(--fuchsia);
+}
+
+.flotante{
+    position:sticky;
+    top: 8vh;
+    z-index: 10001;
+    height: auto;
+}
+
+@media (min-width: 993px) {
+	.flotante{
+        top: 10vh;
+    }
+}
+
+.link_active{
+    color: var(--fuchsia);
+    font-weight: bold;
+}
