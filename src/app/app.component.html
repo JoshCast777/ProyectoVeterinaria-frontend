@@ -1,6 +1,6 @@
 <mat-sidenav-container>
 	<mat-sidenav-content>
-		<app-header [sidenav]="sidenav" [nav_items]="nav_items"></app-header>
+		<app-header [user]="user" [nav_items]="nav_items" (onToggle)="sidenav.toggle()" (openDialog)="openDialog($event)" (onLogout)="logout($event)"></app-header>
 
 		<router-outlet></router-outlet>
 
@@ -8,23 +8,6 @@
 	</mat-sidenav-content>
 
 	<mat-sidenav #sidenav>
-		<img src="{{ 'logo' | image:'png' }}" routerLink="/" alt="logo" />
-
-		<mat-divider></mat-divider>
-
-		<nav>
-			<div>
-				<div *ngFor="let nav_item of nav_items">
-					<button mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="router-link-active" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="sidenav.toggle()">{{ nav_item.name }}</button>
-					<mat-divider></mat-divider>
-				</div>
-			</div>
-
-			<div>
-				<mat-divider></mat-divider>
-
-				<button mat-flat-button class="login" (click)="openDialog()"><mat-icon>login</mat-icon> Registrarse / Entrar</button>
-			</div>
-		</nav>
+		<app-mobile-header [user]="user" [nav_items]="nav_items" (onToggle)="sidenav.toggle()" (openDialog)="openDialog($event)" (onLogout)="logout($event)"></app-mobile-header>
 	</mat-sidenav>
 </mat-sidenav-container>

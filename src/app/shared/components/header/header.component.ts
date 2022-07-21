@@ -1,22 +1,26 @@
-import { Component, Input } from "@angular/core";
-import { MatSidenav } from "@angular/material/sidenav";
-import { NavItem } from "src/app/interfaces/app.intefaces";
-import { MatDialog } from "@angular/material/dialog";
-import { LoginIndexComponent } from "src/app/login/pages/login-index/login-index.component";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { NavItem, User } from "src/app/interfaces/app.intefaces";
 @Component({
 	selector: "app-header",
 	templateUrl: "./header.component.html",
 	styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent {
-	@Input() sidenav!: MatSidenav;
 	@Input() nav_items: NavItem[] = [];
+	@Input() user!: User | undefined;
+	@Output() onToggle = new EventEmitter<void>();
+	@Output() openDialog = new EventEmitter<boolean>();
+	@Output() onLogout = new EventEmitter<boolean>();
 
-	constructor(private dialog: MatDialog) {}
 	toggle(): void {
-		this.sidenav.toggle();
+		this.onToggle.emit();
 	}
-	openDialog(): void {
-		this.dialog.open(LoginIndexComponent);
+
+	dialog(): void {
+		this.openDialog.emit(false);
+	}
+
+	logout(): void {
+		this.onLogout.emit(false);
 	}
 }

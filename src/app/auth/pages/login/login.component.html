@@ -1,0 +1,27 @@
+<h2 class="text">Inicio de Sesión</h2>
+
+<form (ngSubmit)="login()" autocomplete="off" [formGroup]="my_form">
+	<mat-form-field class="text" appearance="fill">
+		<mat-label>Email</mat-label>
+
+		<input matInput type="email" formControlName="email" />
+
+		<mat-error>Email no válido</mat-error>
+	</mat-form-field>
+
+	<mat-form-field class="text" appearance="fill">
+		<mat-label>Contraseña</mat-label>
+
+		<input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+
+		<button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+			<mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+		</button>
+
+		<mat-error>De 8 a 16 caracteres</mat-error>
+	</mat-form-field>
+
+	<app-button [disabled]="my_form.invalid" class="login" text="Ingresar" type="primary" [submit]="true"></app-button>
+</form>
+
+<button class="close_button" mat-mini-fab (click)="cancel()"><mat-icon>close</mat-icon></button>
