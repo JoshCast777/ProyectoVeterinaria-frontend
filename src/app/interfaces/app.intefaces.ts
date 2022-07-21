@@ -48,3 +48,11 @@ export interface User {
 	updated_at?: Date;
 	status?: string;
 }
+
+// barrera
+export interface CardCarrito {
+	imagen:String;
+	nombreProducto: string;
+	precio: number;
+	total:number;
+}

@@ -1,0 +1,14 @@
+.flotante{
+    position:sticky;
+    top: 12.4vh;
+    z-index: 10000;
+    padding-left: 3rem;
+    background-color: var(--white);
+    height: auto;
+}
+
+@media (min-width: 993px) {
+	.flotante{
+        top: 14.4vh;
+    }
+}

@@ -27,8 +27,9 @@ const routes: Routes = [
 	},
 	{
 		path: "store",
-		component: ShopIndexComponent
+		loadChildren: () => import("./shop/shop.module").then(m => m.ShopModule),
 	},
+
 	{
 		path: "user",
 		loadChildren: () => import("./user/user.module").then(m => m.UserModule),

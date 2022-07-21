@@ -1,0 +1,14 @@
+
+<div class="grid fondo">
+    <div class="flex columna">
+<app-card-carrito *ngFor="let card of data_cards" [card]="card" (onCambio)="calcular()"></app-card-carrito>
+    </div>
+    <div class="flex stiky">
+        <p class="resultado">${{totalPagar}}</p>
+        <button mat-flat-button color="accent">COMPRAR
+            <mat-icon>local_grocery_store</mat-icon>
+        </button>
+    </div>
+</div>
+
+
