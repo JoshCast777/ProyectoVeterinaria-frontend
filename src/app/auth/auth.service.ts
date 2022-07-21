@@ -6,24 +6,30 @@ import { UserService } from "../user/user.service";
 	providedIn: "root"
 })
 export class AuthService {
-	user!: User | undefined;
+	authenticated_user_id: string = "";
 
 	constructor(private user_service: UserService) {}
 
-	verifyAuthenticated() {
-		return this.user ? this.user : undefined;
+	verifyAuthenticated(): User | undefined {
+		if (this.authenticated_user_id === "") return undefined;
+
+		const user = this.user_service.getUserById(this.authenticated_user_id);
+
+		if (user) return user;
+		else return undefined;
 	}
 
 	login(auth: Auth): boolean {
-		const user: User | undefined = this.user_service.getUser(auth);
+		const user_id: string = this.user_service.getUser(auth);
 
-		if (user) {
-			this.user = user;
+		if (user_id !== "") {
+			this.authenticated_user_id = user_id;
 			return true;
 		} else return false;
 	}
 
 	logout(): void {
-		this.user = undefined;
+		this.authenticated_user_id = "";
+		console.log("this.authenticated_user_id:", this.authenticated_user_id);
 	}
 }

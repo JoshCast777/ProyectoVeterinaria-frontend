@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
@@ -23,6 +24,6 @@ import { TitleComponent } from "./components/title/title.component";
 @NgModule({
 	declarations: [ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent, MobileHeaderComponent],
 	imports: [CommonModule, ReactiveFormsModule, RouterModule, MaterialModule],
-	exports: [ReactiveFormsModule, MaterialModule, ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent]
+	exports: [FormsModule, ReactiveFormsModule, RouterModule, MaterialModule, ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent]
 })
 export class SharedModule {}

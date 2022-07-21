@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from "./auth/guards/auth.guard";
 
 import { BlogIndexComponent } from "./blog/pages/blog-index/blog-index.component";
 import { AboutComponent } from "./pages/about/about.component";
@@ -27,6 +28,12 @@ const routes: Routes = [
 	{
 		path: "store",
 		component: ShopIndexComponent
+	},
+	{
+		path: "user",
+		loadChildren: () => import("./user/user.module").then(m => m.UserModule),
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
 	},
 	{
 		path: "",

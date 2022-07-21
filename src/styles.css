@@ -114,27 +114,32 @@ div {
 
 .primary {
 	background-color: var(--color-on);
+	border: 0.2rem solid var(--color-on)!important;
 	color: var(--white);
-	border: 0.1rem solid var(--color-on);
 }
 
 .secondary {
-	border: 0.1rem solid var(--color-on);
-	color: var(--color-on);
 	background-color: transparent;
+	border: 0.2rem solid var(--color-on)!important;
+	color: var(--color-on);
+}
+
+.fuchsia {
+	background-color: var(--fuchsia);
+	border: 0.2rem solid var(--fuchsia)!important;
+	color: var(--white);
 }
 
 .warning {
+	border: 0.2rem solid #f85149!important;
 	background-color: #f85149;
 	color: var(--white);
-	border: 0.1rem solid #f85149;
 }
 
-.hidden {
-	border: 0.1rem solid var(--color-on);
-	color: var(--color-on);
+.warning_secondary {
 	background-color: transparent;
-	opacity: 0;
+	border: 0.2rem solid #f85149!important;
+	color: #f85149;
 }
 
 .mat-dialog .mat-dialog-container {

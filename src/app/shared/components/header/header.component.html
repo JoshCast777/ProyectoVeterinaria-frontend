@@ -12,7 +12,7 @@
 
 		<div class="profile_button" *ngIf="user">
 			<div class="text">
-				<p>{{ user.name + " " + user.last_name }}</p>
+				<p routerLink="user">{{ user.name + " " + user.last_name }}</p>
 
 				<p (click)="logout()">Cerrar sesión</p>
 			</div>

@@ -3,7 +3,7 @@
 <div class="profile_button" *ngIf="user">
 	<mat-icon>account_circle</mat-icon>
 
-	<p class="text">{{ user.name + " " + user.last_name }}</p>
+	<p routerLink="/user" class="text">{{ user.name + " " + user.last_name }}</p>
 </div>
 
 <mat-divider></mat-divider>

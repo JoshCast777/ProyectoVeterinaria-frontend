@@ -44,7 +44,7 @@ export interface User {
 	address: string;
 	email: string;
 	password: string;
-	created_at: Date;
-	updated_at: Date;
-	status: string;
+	created_at?: Date;
+	updated_at?: Date;
+	status?: string;
 }

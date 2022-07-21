@@ -3,9 +3,8 @@ import { MatDialog } from "@angular/material/dialog";
 import { MatSidenav } from "@angular/material/sidenav";
 import { NavItem, User } from "./interfaces/app.intefaces";
 import { AuthService } from "./auth/auth.service";
-import { UserService } from "./user/user.service";
 import { AuthIndexComponent } from "./auth/pages/auth-index/auth-index.component";
-import { BreakpointObserver, Breakpoints, BreakpointState } from "@angular/cdk/layout";
+import { BreakpointObserver, BreakpointState } from "@angular/cdk/layout";
 
 @Component({
 	selector: "app-root",
@@ -15,6 +14,7 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from "@angular/cdk/l
 export class AppComponent {
 	@ViewChild("sidenav") sidenav!: MatSidenav;
 	user!: User | undefined;
+	size_display: string = "web";
 	nav_items: NavItem[] = [
 		{
 			name: "Inicio",
@@ -37,9 +37,8 @@ export class AppComponent {
 			path: "/store"
 		}
 	];
-	size_display: string = "web";
 
-	constructor(private dialog: MatDialog, private auth_service: AuthService, private user_service: UserService, private breakpoint_observer: BreakpointObserver) {
+	constructor(private dialog: MatDialog, private auth_service: AuthService, private breakpoint_observer: BreakpointObserver) {
 		this.breakpoint_observer.observe(["(min-width: 769px)"]).subscribe((state: BreakpointState): void => {
 			if (state.matches) this.sidenav?.close();
 		});
@@ -51,8 +50,11 @@ export class AppComponent {
 		this.dialog.open(AuthIndexComponent, {
 			panelClass: "mat-dialog"
 		});
-		this.dialog.afterAllClosed.subscribe(() => this.user = this.auth_service.verifyAuthenticated());
-		// this.dialog.afterAllClosed.subscribe(() => console.log("Cerrando"));
+		this.dialog.afterAllClosed.subscribe(() => {
+			const auth_user = this.auth_service.verifyAuthenticated();
+
+			if (auth_user) this.user = auth_user;
+		});
 	}
 
 	logout(toggle: boolean): void {
