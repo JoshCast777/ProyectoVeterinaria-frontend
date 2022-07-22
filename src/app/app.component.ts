@@ -38,6 +38,7 @@ export class AppComponent {
 		}
 	];
 
+
 	constructor(private dialog: MatDialog, private auth_service: AuthService, private breakpoint_observer: BreakpointObserver) {
 		this.breakpoint_observer.observe(["(min-width: 769px)"]).subscribe((state: BreakpointState): void => {
 			if (state.matches) this.sidenav?.close();

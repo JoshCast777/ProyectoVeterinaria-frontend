@@ -20,10 +20,12 @@ import { SocialLinksComponent } from "./components/social-links/social-links.com
 import { TabsComponent } from "./components/tabs/tabs.component";
 import { TextButtonComponent } from "./components/text-button/text-button.component";
 import { TitleComponent } from "./components/title/title.component";
+import { SearchComponent } from "./components/search/search.component";
+
 
 @NgModule({
-	declarations: [ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent, MobileHeaderComponent],
+	declarations: [ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent, SearchComponent],
 	imports: [CommonModule, ReactiveFormsModule, RouterModule, MaterialModule],
-	exports: [FormsModule, ReactiveFormsModule, RouterModule, MaterialModule, ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent]
+	exports: [ReactiveFormsModule, RouterModule, MaterialModule, ImagePipe, AccordionComponent, ButtonComponent, CardComponent, FooterComponent, GridCardComponent, HeaderComponent, HeaderPagesComponent, MobileHeaderComponent, SocialLinksComponent, TabsComponent, TextButtonComponent, TitleComponent,SearchComponent]
 })
 export class SharedModule {}
