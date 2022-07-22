@@ -21,12 +21,6 @@
     height: auto;
 }
 
-@media (min-width: 993px) {
-	.flotante{
-        top: 10vh;
-    }
-}
-
 .link_active{
     color: var(--fuchsia);
     font-weight: bold;
