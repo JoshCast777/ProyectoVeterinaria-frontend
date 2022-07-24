@@ -3,7 +3,7 @@
 :root {
 	--primary: #d1c5e3;
 	--secondary: #efd9e1;
-	--background: #ccc8f74a;
+	--background: #ccc8f77d;
 	--color-on: #bba2fa;
 	--color-off: #ccc8f7;
 	--fuchsia: #ce2665;
@@ -15,7 +15,7 @@ html,
 body {
 	height: auto;
 	box-sizing: border-box;
-	font-size: 62.5%;
+	font-size: 62.2%;
 }
 
 body {
@@ -41,44 +41,18 @@ div {
 	white-space: break-spaces;
 }
 
-.text {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	line-height: normal;
-	margin: 0;
-	font-size: 1.5rem;
-}
-
-@media (min-width: 481px) {
-	/* * Tablets */
-	.text {
-		font-size: 1.6rem;
-	}
-}
-
-@media (min-width: 769px) {
-	/* * Small desktop screen */
-	.text {
-		font-size: 1.7rem;
-	}
-}
-
-@media (min-width: 993px) {
-	/* * Desktop screen */
-	.text {
-		font-size: 1.8rem;
-	}
-}
-
-@media (min-width: 1201px) {
-	/* * Extra large screen, TV */
-	.text {
-		font-size: 1.9rem;
-	}
 }
 
 .container {
 	width: 98%;
 	margin: 0 auto;
-	max-width: 150rem;
 }
 
 @media (min-width: 321px) {
@@ -89,69 +63,28 @@ div {
 
 @media (min-width: 481px) {
 	.container {
-		width: 93%;
+		width: 90%;
 	}
 }
 
 @media (min-width: 769px) {
 	.container {
-		width: 90%;
+		width: 85%;
 	}
 }
 
-@media (min-width: 993px) {
-	/* * Desktop screen */
+@media (min-width: 1025px) {
 	.container {
-		width: 88%;
+		width: 80%;
 	}
 }
 
 @media (min-width: 1201px) {
 	.container {
-		width: 85%;
+		max-width: 150rem;
 	}
 }
 
-.primary {
-	background-color: var(--color-on);
-	border: 0.2rem solid var(--color-on)!important;
-	color: var(--white);
-}
-
-.secondary {
-	background-color: transparent;
-	border: 0.2rem solid var(--color-on)!important;
-	color: var(--color-on);
-}
-
-.fuchsia {
-	background-color: var(--fuchsia);
-	border: 0.2rem solid var(--fuchsia)!important;
-	color: var(--white);
-}
-
-.warning {
-	border: 0.2rem solid #f85149!important;
-	background-color: #f85149;
-	color: var(--white);
-}
-
-.warning_secondary {
-	background-color: transparent;
-	border: 0.2rem solid #f85149!important;
-	color: #f85149;
-}
-
-.mat-dialog .mat-dialog-container {
-	width: 95%;
-	margin: 0 auto;
-	padding: 0.5rem;
-}
-
-.mat-dialog .mat-dialog-title {
-	margin-bottom: 0.5rem;
-}
-
 .swal2-popup {
-	font-size: 125% !important;
+	font-size: 125%!important;
 }

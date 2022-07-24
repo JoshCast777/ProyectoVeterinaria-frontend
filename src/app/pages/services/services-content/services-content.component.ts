@@ -5,14 +5,16 @@ import { DataCards } from "src/app/interfaces/app.intefaces";
 	selector: "app-services-content",
 	template: `
 		<div class="container">
-			<app-title class="title" [text]="title"></app-title>
+			<h2>{{ title }}</h2>
 
-			<app-grid-card [data_cards]="data_cards"></app-grid-card>
+			<div class="cards">
+				<app-card *ngFor="let card of data_card" [card]="card"></app-card>
+			</div>
 		</div>
 	`,
 	styleUrls: ["./services-content.component.css"]
 })
 export class ServicesContentComponent {
-	@Input() data_cards: DataCards[] = [];
+	@Input() data_card: DataCards[] = [];
 	@Input() title: string = "";
 }

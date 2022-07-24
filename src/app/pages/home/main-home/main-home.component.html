@@ -1,25 +1,58 @@
-<main class="container">
-	<app-title text="Nuestros servicios"></app-title>
-
-	<div class="services">
-		<div class="div">
-			<h3>Ofrecemos servicios de alta calidad</h3>
-			<p class="text">Somos un equipo de Médicos Veterinarios y personal capacitado para la atención integral de las mascotas, con el fin de restablecer, mejorar y resguardar la salud, así como prevenir y evitar las enfermedades que puedan adquirir.</p>
-
-			<h3>Medicina preventiva para perros y gatos.</h3>
-			<p class="text">Chequea tus animalitos a tiempo para prevenir o detectar cualquier anomalía que se presente, recuerda que es tu responsabilidad mantener su bienestar.</p>
-		</div>
-
-		<div class="img">
-			<img src="{{ 'img11' | image }}" alt="gato" />
-		</div>
-	</div>
-
-	<app-grid-card [data_cards]="data_cards | slice: 0:3"></app-grid-card>
-</main>
-
 <div class="container">
-	<app-accordion [data_cards]="data_cards | slice:3"></app-accordion>
-	
-	<app-tabs [data_cards]="data_cards | slice:3"></app-tabs>
+    <div class="flex-fila">
+        <div>
+            <h2>NUESTROS SERVICIOS</h2>
+            <h3>Ofrecemos servicios de alta calidad</h3>
+            <p>Conozca todos los servicios que ofrecemos Somos un equipo de Médicos Veterinarios y personal capacitado para la atención integral de las mascotas, con el fin de restablecer, mejorar y resguardar la salud, así como prevenir y evitar las enfermedades que puedan adquirir.</p>
+            <h3>Medicina preventiva para perros y gatos.</h3>
+            <p>Chequea tus animalitos a tiempo para prevenir o detectar cualquier anomalía que se presente, recuerda que es tu responsabilidad mantener su bienestar.</p>
+        </div>
+        <div>
+            <img src="./assets/img/img11.jpg" alt="gato">
+        </div>
+    </div>
+    <div class="ct">
+            <app-card *ngFor="let card of cards" [card]="card"></app-card>
+    </div>
 </div>
+<div class="container" style="margin-top: 2rem;">
+    <mat-tab-group mat-stretch-tabs> 
+        <mat-tab label="1"> 
+            <div class="flex2-fila">
+                <div>
+                    <img src="./assets/img/index_img1.jpg" alt="Neurologia">
+                </div>
+                <div>
+                    <h3>Neurologia</h3>
+                    <p>La consulta en Neurología empezó por la necesidad de ofrecer una atención de calidad a aquellos perros y gatos que padecen de alteraciones en el sistema nervioso.Para dar este servicio, contamos con profesionales especialistas en Neurología y Neurocirugía; además, tenemos el equipo necesario para diagnosticar y tratar de forma oportuna problemas neurológicos de nuestras mascotas. </p>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="2"> 
+            <div class="flex2-fila">
+                <div>
+                    <img src="./assets/img/index_img2.jpg" alt="Medicina Felina">
+                </div>
+                <div>
+                    <h3>Medicina Felina</h3>
+                    <p>La atención a gatos representa un reto para cualquier veterinario ya que su comportamiento requiere de mucha paciencia y pericia. En nuestro hospital nos hemos especializado en felinos; contamos con expertos veterinarios y las instalaciones adecuadas para hacer sentir a los gatos como en casa. </p>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="3">
+            <div  class="flex2-fila">
+                <div>
+                    <img src="./assets/img/index_img3.jpg" alt="Odontologia">
+                </div>
+                <div>
+                    <h3>Odontologia</h3>
+                    <p>La salud dental es muy importante, la prevención de las enfermedades dentales garantiza una correcta salud general y calidad de vida en los perros y los gatos. En nuestra clínica contamos con un equipo de odontología preparado para resolver los diferentes problemas dentales, tenemos la tecnología necesaria y personal capacitado para realizar profilaxis dentales preventivas, curativas, extracciones dentales simples o complicadas que van ayudar a tu mascota y la mantendrán con una sonrisa brillante.</p>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+
+
+

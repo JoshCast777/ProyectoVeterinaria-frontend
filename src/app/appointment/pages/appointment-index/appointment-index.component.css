@@ -1,0 +1,130 @@
+table {
+    width: 100%;
+    margin-top: 0.5cm;
+    
+ }
+
+.headt th {
+  background-color: #bf53e0;
+  color: white;
+}
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    
+  }
+  /*tamaño del pading contenedor del grid */
+  .container {
+    padding: 40px 70px;
+  }
+
+  .demo-table {
+    width: 100%;
+  }
+  
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+    
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+
+  .agregar {
+		background-color: transparent;
+		border: 0.3rem solid var(--fuchsia);
+		color: var(--fuchsia);
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	.agregar:hover {
+		border: 0.3rem solid var(--fuchsia);
+		background-color: var(--fuchsia);
+		color: var(--white);
+		border-radius: 0.4rem;
+		-webkit-border-radius: 0.4rem;
+		-moz-border-radius: 0.4rem;
+		-ms-border-radius: 0.4rem;
+		-o-border-radius: 0.4rem;
+	}
+
+/*autiresponsivo */
+@media (max-width: 481px) {
+    /* * Small desktop screen*/
+    .container {
+      width: 95%;
+      padding: 20px 20px;
+      margin: 0 auto;
+  }
+  *, *:before, *:after {
+  box-sizing: inherit;
+}
+   
+}
+
+@media (max-width: 769px) {
+  
+  .container {
+    width: 90%;
+    padding: 40px 50px;
+    margin: 0 auto;
+} 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+div {
+  white-space: break-spaces;
+}
+.inputs{
+  margin: auto;
+  width: 20rem;
+}
+}
+
+@media (min-width: 1025px) {
+	/* * Large desktop screen */
+	
+  .container {
+    width: 80%;
+    padding: 40px 10px;
+    margin: 0 auto;
+} 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+div {
+  white-space: break-spaces;
+}
+.inputs{
+  margin: auto;
+  width: 20rem;
+}
+}
+
+@media (max-width: 350px) {
+	/* *mobil */
+  .container {
+    width: 95%;
+    padding: 40px 5px;
+    margin: 0 auto;
+} 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+div {
+  white-space: break-spaces;
+}
+.inputs{
+  margin: auto;
+  width: 20rem;
+}
+}

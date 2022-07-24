@@ -1,0 +1,44 @@
+<div class="centrar">
+    <form [formGroup]="form" (ngSubmit)="Registrar()">
+        <h1>Registro </h1>
+        <div class="inputs">
+            <mat-form-field style="width: 100%;"  appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input type="text" matInput formControlName="usuario">
+            </mat-form-field>
+        </div>
+        <!--  -->
+        <div class="inputs">
+            <mat-form-field style="width: 100%;"  appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email">
+            </mat-form-field>
+        </div>
+        <!--  -->
+        <div class="inputs">
+            <mat-form-field style="width: 100%;"  appearance="fill">
+                <mat-label>Telefono</mat-label>
+                <input type="number" matInput formControlName="telefono">
+            </mat-form-field>
+        </div>
+        <!--  -->
+        <div class="inputs">
+            <mat-form-field style="width: 100%;" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput formControlName="password">
+            </mat-form-field>
+        </div>
+        <div class="inputs">
+            <mat-form-field style="width: 100%;" appearance="fill">
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input type="password" matInput formControlName="password">
+            </mat-form-field>
+        </div>
+        <section class="example-section">
+            <mat-checkbox class="example-margin">Acepto terminos y condiciones!</mat-checkbox>
+        </section>
+        <div class="boton">
+            <app-button text="Registrarse" disabled="form.invalid"></app-button>
+        </div>
+    </form>
+</div>

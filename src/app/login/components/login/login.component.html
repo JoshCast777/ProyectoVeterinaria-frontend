@@ -1,0 +1,21 @@
+<div class="centrar">
+  <form [formGroup]="form" (ngSubmit)="ingresar()">
+    <h1>Login </h1>
+    <div class="inputs">
+      <mat-form-field style="width: 100%;"  appearance="fill">
+        <mat-label>email</mat-label>
+        <input type="email" matInput formControlName="email">
+      </mat-form-field>
+    </div>
+    <!--  -->
+    <div class="inputs">
+      <mat-form-field style="width: 100%;" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+    </div>
+    <div class="boton">
+      <app-button text="Ingresar" disabled="form.invalid"></app-button>
+    </div>
+  </form>
+</div>

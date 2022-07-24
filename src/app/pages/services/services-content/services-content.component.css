@@ -2,10 +2,6 @@
 	margin-bottom: 4rem;
 }
 
-app-title {
-	text-align: center;
-}
-
 h2 {
 	font-size: 3rem;
 	line-height: normal;
@@ -14,7 +10,27 @@ h2 {
 
 @media (min-width: 481px) {
 	/* * Small desktop screen */
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
 	h2 {
 		font-size: 5rem;
+	}
+}
+
+@media (min-width: 1025px) {
+	/* * Large desktop screen */
+	.cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 1201px) {
+	/* * Extra large screen, TV */
+	.cards {
+		gap: 3rem;
 	}
 }

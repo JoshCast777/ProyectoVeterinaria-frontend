@@ -1,0 +1,45 @@
+<div class="body">
+  <div class="logo">
+      <img src="./assets/img/logo.png" alt="Logo">
+  </div>   
+  <div class="centrar">
+<h1 *ngIf="!isChange" mat-dialog-title>AGREGUE SU CITA</h1>
+<h1 *ngIf="isChange" mat-dialog-title>EDITE SU CITA</h1>
+<form [formGroup]="cita">
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Position</mat-label>
+    <input matInput  formControlName="id" [(ngModel)]="data.position">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" [(ngModel)]="data.nombre">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Apellido</mat-label>
+    <input  matInput formControlName="apellido" [(ngModel)]="data.apellido">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>fecha</mat-label>      
+    <input matInput [matDatepicker]="picker" formControlName="fecha" matInput [(ngModel)]="data.fecha">
+    <mat-hint>mm/dd/aaaa</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>tipo-mascota</mat-label>
+    <input matInput formControlName="mascota" [(ngModel)]="data.tipo">
+  </mat-form-field>  
+  <mat-form-field appearance="outline">
+    <mat-label >motivo</mat-label>
+    <input  matInput formControlName="motivo" [(ngModel)]="data.motivo">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="boton">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button color="success"  [disabled] = "!cita.valid" *ngIf="!isChange"  [mat-dialog-close]="data" cdkFocusInitial>Guardar</button>
+  <button mat-button color="success" *ngIf="isChange"  [mat-dialog-close]="data" cdkFocusInitial>Editar</button>
+</div>
+</form>
+</div>
+</div>

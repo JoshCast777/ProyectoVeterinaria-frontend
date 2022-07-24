@@ -1,0 +1,60 @@
+
+.body{
+    gap: 5rem;
+    background-color: azure;
+}
+.logo{
+    display: none;
+}
+.mat-success {
+    background-color: rgb(114, 228, 213);
+    color: rgb(255, 255, 255);
+}
+
+h1{
+    color: #272629;
+    font-size: 2.5rem;
+	font-weight: bold;
+	line-height: normal;
+    
+
+  }
+/*autiresponsivo */
+@media (min-width: 481px) {
+    
+    .logo{
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+    .logo>img{
+        width: 30%;        
+        
+    }
+}
+@media (min-width: 769px) {
+    .body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        width: 20rem;
+        height: 20rem;
+    }
+    .logo>img{
+        width: 100%;
+    }
+	
+}
+@media (min-width: 769px) {
+    
+    .centrar{
+        text-align: center;
+        width: 25rem;
+    }
+    .inputs{
+        margin: auto;
+        width: 20rem;
+    }
+}

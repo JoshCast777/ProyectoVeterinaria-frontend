@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AuthGuard } from "./auth/guards/auth.guard";
-
-import { BlogIndexComponent } from "./blog/pages/blog-index/blog-index.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { ServicesComponent } from "./pages/services/services.component";
 import { ShopIndexComponent } from "./shop/pages/shop-index/shop-index.component";
+import { AppointmentIndexComponent } from "./appointment/pages/appointment-index/appointment-index.component";
+import { BlogIndexComponent } from "./blog/pages/blog-index/blog-index.component";
+import { LoginIndexComponent } from "./login/pages/login-index/login-index.component";
 
 const routes: Routes = [
 	{
@@ -24,17 +24,14 @@ const routes: Routes = [
 	{
 		path: "blog",
 		component: BlogIndexComponent
-	},
+	},		
 	{
 		path: "store",
-		loadChildren: () => import("./shop/shop.module").then(m => m.ShopModule),
+		component: ShopIndexComponent
 	},
-
 	{
-		path: "user",
-		loadChildren: () => import("./user/user.module").then(m => m.UserModule),
-		canLoad: [AuthGuard],
-		canActivate: [AuthGuard]
+		path: "Appointment",
+		component: AppointmentIndexComponent
 	},
 	{
 		path: "",

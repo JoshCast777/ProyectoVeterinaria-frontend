@@ -1,30 +1,19 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from "./app.component";
-
 import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { HttpClientModule } from "@angular/common/http";
-
-import { AuthModule } from "./auth/auth.module";
-import { PagesModule } from "./pages/pages.module";
 import { SharedModule } from "./shared/shared.module";
+import { PagesModule } from "./pages/pages.module";
+import { LoginModule } from "./login/login.module";
+import { AppointmentModule } from "./appointment/appointment.module";
 
-import { MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material/dialog";
-import { UserModule } from "./user/user.module";
-import { ShopModule } from "./shop/shop.module";
+
 @NgModule({
 	declarations: [AppComponent],
-	imports: [AppRoutingModule, BrowserAnimationsModule, BrowserModule, HttpClientModule, SharedModule, ShopModule, PagesModule, AuthModule, UserModule],
-	providers: [
-		{
-			provide: MAT_DIALOG_DEFAULT_OPTIONS,
-			useValue: {
-				hasBackDrop: false
-			}
-		}
-	],
+	imports: [AppointmentModule,BrowserModule, AppRoutingModule, BrowserAnimationsModule, SharedModule, PagesModule, LoginModule],
+	providers: [],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

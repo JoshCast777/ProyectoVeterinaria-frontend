@@ -1,50 +1,69 @@
-app-accordion {
-	display: block;
-}
-
-app-tabs {
-	display: none;
-}
-
 img {
-	width: 100%;
+    width: 100%;
+    
+}
+h2{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-h3 {
-	font-size: 2rem;
-	font-weight: bold;
+
+@media(min-width: 481px){
+    .ct{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+    }
+    .flex2-fila> div:nth-child(1){
+        height: 20rem;
+        flex-basis: 40%;
+    }
+    .flex2-fila> div:nth-child(1)>img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
 }
+@media(min-width: 769px){
+    .flex-fila{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem;
+        gap: 2rem;
+    }
+    
+    
+    .flex-fila> div:nth-child(1){
+        flex-basis: 60%;
+    }
+    .flex-fila> div:nth-child(2){
+        flex-basis: 40%;
+    }
 
-main {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-}
-
-app-title {
-	text-align: center;
-}
-
-@media (min-width: 769px) {
-	/* * Small desktop screen */
-	.services {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.services > .div {
-		flex-basis: calc(55% - 1rem);
-	}
-
-	.services > .img {
-		flex-basis: calc(45% - 1rem);
-	}
-
-	app-accordion {
-		display: none;
-	}
-
-	app-tabs {
-		display: block;
-	}
+    .flex2-fila{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem;
+        gap: 2rem;
+    }
+    
+    .flex2-fila> div:nth-child(1){
+        height: 20rem;
+        flex-basis: 40%;
+    }
+    .flex2-fila> div:nth-child(1)>img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .flex2-fila> div:nth-child(2){
+        flex-basis: 60%;
+    }
 }

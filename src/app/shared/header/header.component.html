@@ -1,0 +1,21 @@
+<mat-toolbar>
+	<div class="container header">
+		<div>
+			<img src="./assets/img/logo.png" alt="logo" routerLink="/home" />
+
+			<nav>
+				<button class="nav_item" *ngFor="let nav_item of nav_items" mat-flat-button [routerLink]="[nav_item.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ nav_item.name }}</button>
+			</nav>
+		</div>
+
+		<button mat-flat-button class="login" (click)="openDialogSesion()">Registrarse / Entrar</button>
+	</div>
+
+	<div class="mobile-header">
+		<button mat-icon-button class="menu" (click)="toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+
+		<img src="./assets/img/logo.png" routerLink="/" alt="logo" />
+	</div>
+</mat-toolbar>

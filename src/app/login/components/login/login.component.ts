@@ -3,7 +3,7 @@ import { Component} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Auth } from 'src/app/interfaces/app.intefaces';
+import { UserLogin } from 'src/app/interfaces/app.intefaces';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +12,9 @@ import { Auth } from 'src/app/interfaces/app.intefaces';
 })
 export class LoginComponent{
   form: FormGroup;
-  user_data: Auth={
-    email:"kevin@gmail.com",
-    password: "kevin123"
+  user_data: UserLogin={
+    email:"jose",
+    password: "jose"
   };
   constructor(private dialogRef: MatDialogRef<LoginComponent>,private fb: FormBuilder, private _snackBar: MatSnackBar){
     this.form = this.fb.group({

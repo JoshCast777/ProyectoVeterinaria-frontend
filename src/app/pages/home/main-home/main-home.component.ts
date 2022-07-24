@@ -1,54 +1,46 @@
-import { Component } from "@angular/core";
-import { DataCards } from "src/app/interfaces/app.intefaces";
+import { Component} from '@angular/core';
+import { DataCards } from 'src/app/interfaces/app.intefaces';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
-	selector: "app-main-home",
-	templateUrl: "./main-home.component.html",
-	styleUrls: ["./main-home.component.css"]
+  selector: 'app-main-home',
+  templateUrl: './main-home.component.html',
+  styleUrls: ['./main-home.component.css']
 })
 export class MainHomeComponent {
-	data_cards: DataCards[] = [
-		{
-			img: {
-				name: "img1"
-			},
-			title: "Hospitalización",
-			text: "Muchos tratamientos requieren supervización constante día y noche, nuestro consultorio dispone de hospitalización para aquellas mascotas que lo requiran, siendo atendidos por profesionales las 24 horas. Sus mascotas estarán en buenas manos."
-		},
-		{
-			img: {
-				name: "img2"
-			},
-			title: "Laboratorio clínico",
-			text: "Un laboratorio clínico en nuestras instalaciones equipoado con profesionales y equipo capacitado para estudiar aquellos elementos que causan malestares en la mascotas y brindar un diagnóstico profesional y preciso, así como una pronta atención."
-		},
-		{
-			img: {
-				name: "img3"
-			},
-			title: "Vacunación",
-			text: "Para consultar nuestros servicios puede contactarnos enviando un correo o vía telefónica. Se aplican a partir de las 12 semanas de edad. Revacunación anual de séxtuple y rabia."
-		},
-		{
-			img: {
-				name: "img6"
-			},
-			title: "Medicina Felina",
-			text: "La atención a gatos representa un reto para cualquier veterinario debido a su comportamiento que requiere paciencia y pericia. Es por eso contamos con expertos veterinarios dedicados a los gatos y las instalaciones adecuadas para tratarlos."
-		},
-		{
-			img: {
-				name: "img7"
-			},
-			title: "Neurología",
-			text: "Contamos con profesionales especializados en Neurología y Neurocirugía, así también disponemos del equipo necesario para diagnosticar y tratar de forma oportuna los problemas neurológicos de sus mascotas."
-		},
-		{
-			img: {
-				name: "img8"
-			},
-			title: "Dermatología",
-			text: "Las mascotas son muy propensas a tener enfermedades dermatológicas, debido a su constante contacto con el suelo, tierra o demás materiales. Por esta razón, no hemos capacitado para detectar y tratar las diferentes enfermedades que pueden llegar a la piel y afectarlos."
-		}
-	];
+
+  cards : DataCards[]=[
+    {
+      img: "img2",
+      title: "Consultas médicas",
+      text: "Clínica Veterinaria Guayaquil cuenta con excelentes especialistas con herramientas y equipos de última generación, podemos diagnosticar y tratar las enfermedades de las mascotas con mayor precisión y rapidez."
+    },
+    {
+      img: "img5",
+      title: "Vacunación",
+      text: "Para consultar nuestros servicios puede contactarnos enviando un correo o vía telefónica. Se aplican a partir de las 12 semanas de edad. Revacunación anual de séxtuple y rabia"
+    },
+    {
+      img: "img6",
+      title: "Cirugías",
+      text: "Es una de las principales herramientas terapéuticas dentro de la sanidad veterinaria. Nuestro equipo de especialistas destaca por su capacidad profesional así también como de su formación continua los que nos permite situarnos en la vanguardia de la cirugía veterinaria."
+    },
+    {
+      img: "img6",
+      title: "Cirugías",
+      text: "Es una de las principales herramientas terapéuticas dentro de la sanidad veterinaria. Nuestro equipo de especialistas destaca por su capacidad profesional así también como de su formación continua los que nos permite situarnos en la vanguardia de la cirugía veterinaria."
+    },
+    {
+      img: "img6",
+      title: "Cirugías",
+      text: "Es una de las principales herramientas terapéuticas dentro de la sanidad veterinaria. Nuestro equipo de especialistas destaca por su capacidad profesional así también como de su formación continua los que nos permite situarnos en la vanguardia de la cirugía veterinaria."
+    },
+    {
+      img: "img6",
+      title: "Cirugías",
+      text: "Es una de las principales herramientas terapéuticas dentro de la sanidad veterinaria. Nuestro equipo de especialistas destaca por su capacidad profesional así también como de su formación continua los que nos permite situarnos en la vanguardia de la cirugía veterinaria."
+    }
+]
+
+  
 }
